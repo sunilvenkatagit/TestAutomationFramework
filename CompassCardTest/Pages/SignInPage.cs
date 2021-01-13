@@ -1,11 +1,10 @@
 ﻿using AutomationFramework.Configuration.DriverConfig;
-using AutomationFramework.Libraries;
 using OpenQA.Selenium;
 using static AutomationFramework.Libraries.EnumLibrary;
 
 namespace CompassCardTest.Pages
 {
-    public class SignInPage : ActionsLibrary
+    public class SignInPage : BasePage
     {
         private readonly By txtBoxEmail = By.Id("Content_emailInfo_txtEmail");
         private readonly By txtBoxPassword = By.XPath("//input[@id='Content_passwordInfo_txtPassword' and @type='password']");

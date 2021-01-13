@@ -4,7 +4,7 @@ using static AutomationFramework.Libraries.EnumLibrary;
 
 namespace CompassCardTest.Pages
 {
-    public class MyCardsPage : ActionsLibrary
+    public class MyCardsPage : BasePage
     {
         private readonly By btnSignOut = By.Id("btnSignOut");
 

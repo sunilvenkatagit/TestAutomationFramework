@@ -1,19 +1,19 @@
 ﻿using AutomationFramework.Configuration.DriverConfig;
 using AutomationFramework.Configuration.ReportConfig;
-using AutomationFramework.Libraries;
 using OpenQA.Selenium;
 using static AutomationFramework.Libraries.EnumLibrary;
 
 namespace CompassCardTest.Pages
 {
-    public class HomePage : ActionsLibrary
+    public class HomePage : BasePage
     {
         private readonly By btnSignIn = By.Id("Content_lbSignIn");
         private readonly By notificationMsg = By.XPath("//div[@class='global-message  notification with-btn' and @style='display: block;']/p");
 
         public HomePage LaunchCompasscardWebsite()
         {
-            DriverManager.GetDriver().Url = "https://compasscard.ca";
+            //driver.Url = "https://compasscard.ca";
+            driver.Url = URL;
             ExtentLogger.Pass("Launched CompassCard", true);
             return this;
         }
