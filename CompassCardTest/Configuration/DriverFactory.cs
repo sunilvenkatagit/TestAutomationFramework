@@ -21,6 +21,7 @@ namespace CompassCardTest
                 case Constants.TestBrowsers.FIREFOX:
                     var firefoxOptions = new FirefoxOptions();
                     firefoxOptions.AddAdditionalCapability("acceptInsecureCerts", true, true);
+                    firefoxOptions.AddArgument("no-sandbox");
                     DriverManager.SetDriver(new FirefoxDriver(firefoxOptions));
                     break;
             }
