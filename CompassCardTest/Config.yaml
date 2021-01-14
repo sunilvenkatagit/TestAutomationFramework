@@ -4,8 +4,8 @@
   SiteAlias: "compasscard.ca"
 
 Settings:
-    Browser: "Firefox"
-    DeviceType: "Desktop"
+    Browser: Chrome
+    DeviceType: Desktop
     ShowOnMonitor: 2
     TestCategory: BVT
     RunInParallel: True
