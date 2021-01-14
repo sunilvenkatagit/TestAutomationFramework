@@ -1,5 +1,6 @@
 ﻿using AutomationFramework.Configuration.DriverConfig;
 using AutomationFramework.Configuration.ReportConfig;
+using AventStack.ExtentReports;
 using OpenQA.Selenium;
 using static AutomationFramework.Libraries.EnumLibrary;
 
@@ -12,8 +13,7 @@ namespace CompassCardTest.Pages
 
         public HomePage LaunchCompasscardWebsite()
         {
-              //driver.Url = "https://compasscard.ca";
-            driver.Url = URL;
+            driver.Navigate().GoToUrl(URL);
             ExtentLogger.Pass("Launched CompassCard", true);
             return this;
         }

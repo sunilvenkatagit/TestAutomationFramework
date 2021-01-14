@@ -1,4 +1,5 @@
-﻿using AutomationFramework.Libraries;
+﻿using AutomationFramework.Configuration.YamlConfig;
+using AutomationFramework.Libraries;
 using AventStack.ExtentReports;
 
 
@@ -7,6 +8,7 @@ namespace AutomationFramework.Configuration.ReportConfig
     public class ExtentLogger
     {
         private ExtentLogger() { }
+        static Config myConfig = new Config();
 
         public static void Pass(string message)
         {
@@ -25,7 +27,7 @@ namespace AutomationFramework.Configuration.ReportConfig
 
         public static void Pass(string message, bool isScreenshotNeeded)
         {
-            if (isScreenshotNeeded)
+            if (myConfig.settings.PassedStepScreenshot == "yes" && isScreenshotNeeded)
                 ExtentManager.GetExtentTest().Pass(message, MediaEntityBuilder.CreateScreenCaptureFromBase64String(UtilityLibrary.Capture()).Build());
             else
                 Pass(message);
@@ -33,7 +35,7 @@ namespace AutomationFramework.Configuration.ReportConfig
 
         public static void Fail(string message, bool isScreenshotNeeded)
         {
-            if (isScreenshotNeeded)
+            if (myConfig.settings.FailedStepScreenshot == "yes" && isScreenshotNeeded)
                 ExtentManager.GetExtentTest().Fail(message, MediaEntityBuilder.CreateScreenCaptureFromBase64String(UtilityLibrary.Capture()).Build());
             else
                 Fail(message);

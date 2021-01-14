@@ -9,6 +9,8 @@ Settings:
     ShowOnMonitor: 2
     TestCategory: BVT
     RunInParallel: True
+    PassedStepScreenshot: yes
+    FailedStepScreenshot: yes
 
 # Browsers
     # Chrome
@@ -30,3 +32,11 @@ Settings:
 # RunInParallel
     # True
     # False
+
+# PassedStepScreenshot
+    # yes
+    # no
+
+# FaileddStepScreenshot
+    # yes
+    # no

@@ -22,6 +22,8 @@ namespace AutomationFramework.Configuration.YamlConfig
             public int ShowOnMonitor { get; set; }
             public string TestCategory { get; set; }
             public string RunInParallel { get; set; }
+            public string PassedStepScreenshot { get; set; }
+            public string FailedStepScreenshot { get; set; }
         }
 
         public struct Site
@@ -54,10 +56,14 @@ namespace AutomationFramework.Configuration.YamlConfig
             settings.ShowOnMonitor = System.Convert.ToInt32(get_attribute(items, "ShowOnMonitor"));
             settings.TestCategory = get_attribute(items, "TestCategory");
             settings.RunInParallel = get_attribute(items, "RunInParallel");
+            settings.PassedStepScreenshot = get_attribute(items, "PassedStepScreenshot");
+            settings.FailedStepScreenshot = get_attribute(items, "FailedStepScreenshot");
             System.Diagnostics.Debug.WriteLine("Browser         is: " + settings.Browser);
             System.Diagnostics.Debug.WriteLine("Device         is: " + settings.DeviceType);
             System.Diagnostics.Debug.WriteLine("ShowOnMonitor   is: " + settings.ShowOnMonitor);
             System.Diagnostics.Debug.WriteLine("RunInParallel   is: " + settings.RunInParallel);
+            System.Diagnostics.Debug.WriteLine("PassedStepScreenshot   is: " + settings.PassedStepScreenshot);
+            System.Diagnostics.Debug.WriteLine("FailedStepScreenshot   is: " + settings.FailedStepScreenshot);
         }
         private string get_attribute(YamlMappingNode itemName, string attr)
         {
