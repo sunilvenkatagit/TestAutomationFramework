@@ -29,7 +29,8 @@ namespace CompassCardTest.Pages
 
         public MyCardsPage SubmitSignIn()
         {
-            ClickOnElement(btnSignIn, WaitStrategy.CLICKABLE, "SignIn button");
+            //ClickOnElement(btnSignIn, WaitStrategy.CLICKABLE, "SignIn button");
+            ClickUsingJavaScript(btnSignIn, WaitStrategy.CLICKABLE, "SignIn button");
             return new MyCardsPage();
         }
     }

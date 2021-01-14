@@ -4,7 +4,7 @@
   SiteAlias: "compasscard.ca"
 
 Settings:
-    Browser: "Chrome"
+    Browser: "Firefox"
     DeviceType: "Desktop"
     ShowOnMonitor: 2
     TestCategory: BVT
