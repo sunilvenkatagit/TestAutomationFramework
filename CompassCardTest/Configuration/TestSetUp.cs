@@ -1,5 +1,4 @@
 ﻿using AutomationFramework.Configuration.ReportConfig;
-using AutomationFramework.Configuration.YamlConfig;
 using AutomationFramework.Libraries;
 using NUnit.Framework;
 

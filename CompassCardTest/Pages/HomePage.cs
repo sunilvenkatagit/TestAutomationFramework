@@ -30,7 +30,6 @@ namespace CompassCardTest.Pages
 
         public string GetNotificationMessage()
         {
-            SwitchTo_Window(Window.SECONDWINDOW, "2nd");
             return GetText(notificationMsg, WaitStrategy.VISIBLE, "Notification popup");
         }
     }

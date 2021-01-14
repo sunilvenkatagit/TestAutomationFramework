@@ -6,6 +6,7 @@ using OpenQA.Selenium;
 using System;
 using OpenQA.Selenium.Support.UI;
 using System.Collections.ObjectModel;
+using OpenQA.Selenium.Interactions;
 
 namespace AutomationFramework.Libraries
 {
@@ -37,6 +38,30 @@ namespace AutomationFramework.Libraries
             catch (Exception)
             {
                 ExtentLogger.Fail($"Failed to Click on { elementName }", true);
+                throw;
+            }
+        }
+
+        protected void ClickUsingActions(By element, Perform action, string elementName)
+        {
+            try
+            {
+                switch (action)
+                {
+                    case Perform.SINGLECLICK:
+                        new Actions(DriverManager.GetDriver())
+                            .MoveToElement(ExplicitlyWaitFor(element, WaitStrategy.CLICKABLE)).Click().Build().Perform();
+                        break;
+                    case Perform.DOUBLECLICK:
+                        new Actions(DriverManager.GetDriver())
+                            .MoveToElement(ExplicitlyWaitFor(element, WaitStrategy.CLICKABLE)).DoubleClick().Build().Perform();
+                        break;
+                }
+                ExtentLogger.Pass($"Clicked on { elementName }", true);
+            }
+            catch (Exception)
+            {
+                ExtentLogger.Fail($"Failed to click on { elementName }", true);
                 throw;
             }
         }
@@ -114,27 +139,34 @@ namespace AutomationFramework.Libraries
             }
         }
 
-        protected void SwitchTo_Window(Window window, string description)
+        protected void SwitchTo_Window(Window window, string windowName)
         {
             try
             {
                 var windowHandles = WaitForNewWindow();
                 DriverManager.GetDriver().SwitchTo().Window(windowHandles[Convert.ToInt32(window)]);
-                ExtentLogger.Pass($"Switched to window '{ description }'", true);
+                ExtentLogger.Pass($"Switched to window '{ windowName }'", true);
             }
             catch (Exception)
             {
-                ExtentLogger.Fail($"Failed switching to '{ description }' window. Please check!", true);
+                ExtentLogger.Fail($"Failed switching to '{ windowName }' window. Please check!", true);
                 throw;
             }
         }
 
-        protected void SwitchTo_iFrame()
+        protected void SwitchTo_iFrame(By element, string frameName)
         {
-        }
-
-        protected void ClickUsingActions()
-        {
+            try
+            {
+                new WebDriverWait(DriverManager.GetDriver(), TimeSpan.FromSeconds(10))
+                    .Until(SeleniumExtras.WaitHelpers.ExpectedConditions.FrameToBeAvailableAndSwitchToIt(element));
+                ExtentLogger.Pass($"Switched to iFrame: '{ frameName }'", true);
+            }
+            catch (Exception)
+            {
+                ExtentLogger.Fail($"Failed switching to an iFrame: '{ frameName }'. Please check!", true);
+                throw;
+            }
         }
     }
 }

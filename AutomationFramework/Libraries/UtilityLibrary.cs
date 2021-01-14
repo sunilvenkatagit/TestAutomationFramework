@@ -26,14 +26,14 @@ namespace AutomationFramework.Libraries
             return DateTime.Now.ToString("yyyy-MM-dd h mm ss");
         }
 
-        public static string Capture()
+        internal static string Capture()
         {
             ITakesScreenshot ts = (ITakesScreenshot)DriverManager.GetDriver();
             Screenshot screenshot = ts.GetScreenshot();
             return screenshot.AsBase64EncodedString.ToString();
         }
 
-        public static IWebElement ExplicitlyWaitFor(By element, WaitStrategy waitStrategy)
+        internal static IWebElement ExplicitlyWaitFor(By element, WaitStrategy waitStrategy)
         {
             IWebElement webElement = null;
             switch (waitStrategy)
@@ -88,7 +88,7 @@ namespace AutomationFramework.Libraries
                 process.Kill();
         }
 
-        public static ReadOnlyCollection<string> WaitForNewWindow()
+        internal static ReadOnlyCollection<string> WaitForNewWindow()
         {
             int time = 2000;
 

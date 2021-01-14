@@ -1,6 +1,4 @@
-﻿
-
-namespace AutomationFramework.Libraries
+﻿namespace AutomationFramework.Libraries
 {
     public static class EnumLibrary
     {
@@ -23,6 +21,12 @@ namespace AutomationFramework.Libraries
             CURRENTWINDOW = 0,
             SECONDWINDOW = 1,
             THIRDWINDOW = 2
+        }
+
+        public enum Perform
+        {
+            SINGLECLICK,
+            DOUBLECLICK
         }
     }
 }
