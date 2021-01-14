@@ -16,7 +16,9 @@ namespace CompassCardTest
             switch (myConfig.settings.Browser)
             {
                 case Constants.TestBrowsers.CHROME:
-                    DriverManager.SetDriver(new ChromeDriver());
+                    var chromeOptions = new ChromeOptions();
+                    chromeOptions.AddArgument("no-sandbox");
+                    DriverManager.SetDriver(new ChromeDriver(chromeOptions));
                     break;
                 case Constants.TestBrowsers.FIREFOX:
                     var firefoxOptions = new FirefoxOptions();
