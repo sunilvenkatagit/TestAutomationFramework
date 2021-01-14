@@ -10,5 +10,12 @@ namespace AutomationFramework.Libraries
             PRESENT,
             VISIBLE
         }
+
+        public enum SelectBy
+        {
+            INDEX,
+            TEXT,
+            VALUE
+        }
     }
 }

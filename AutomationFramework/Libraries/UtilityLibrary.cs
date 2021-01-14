@@ -39,7 +39,6 @@ namespace AutomationFramework.Libraries
                 case WaitStrategy.CLICKABLE:
                     webElement = new WebDriverWait(DriverManager.GetDriver(), TimeSpan.FromSeconds(10))
                                     .Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(element));
-                    HighlightElement(element);
                     break;
                 case WaitStrategy.PRESENT:
                     webElement = new WebDriverWait(DriverManager.GetDriver(), TimeSpan.FromSeconds(10))
