@@ -1,6 +1,5 @@
 ﻿using AutomationFramework.Configuration.DriverConfig;
 using AutomationFramework.Configuration.ReportConfig;
-using AventStack.ExtentReports;
 using OpenQA.Selenium;
 using static AutomationFramework.Libraries.EnumLibrary;
 
@@ -31,6 +30,7 @@ namespace CompassCardTest.Pages
 
         public string GetNotificationMessage()
         {
+            SwitchTo_Window(Window.SECONDWINDOW, "2nd");
             return GetText(notificationMsg, WaitStrategy.VISIBLE, "Notification popup");
         }
     }

@@ -5,6 +5,7 @@ using AutomationFramework.Configuration.ReportConfig;
 using OpenQA.Selenium;
 using System;
 using OpenQA.Selenium.Support.UI;
+using System.Collections.ObjectModel;
 
 namespace AutomationFramework.Libraries
 {
@@ -113,9 +114,19 @@ namespace AutomationFramework.Libraries
             }
         }
 
-        protected void SwitchTo_Window()
+        protected void SwitchTo_Window(Window window, string description)
         {
-
+            try
+            {
+                var windowHandles = WaitForNewWindow();
+                DriverManager.GetDriver().SwitchTo().Window(windowHandles[Convert.ToInt32(window)]);
+                ExtentLogger.Pass($"Switched to window '{ description }'", true);
+            }
+            catch (Exception)
+            {
+                ExtentLogger.Fail($"Failed switching to '{ description }' window. Please check!", true);
+                throw;
+            }
         }
 
         protected void SwitchTo_iFrame()

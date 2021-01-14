@@ -2,8 +2,10 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.IO;
+using System.Threading;
 using static AutomationFramework.Libraries.EnumLibrary;
 
 namespace AutomationFramework.Libraries
@@ -84,6 +86,30 @@ namespace AutomationFramework.Libraries
 
             foreach (var process in Process.GetProcessesByName("geckodriver"))
                 process.Kill();
+        }
+
+        public static ReadOnlyCollection<string> WaitForNewWindow()
+        {
+            int time = 2000;
+
+            for (int i = 0; i <= 10; i++)
+            {
+                if (DriverManager.GetDriver().WindowHandles.Count > 1)
+                {
+                    break;
+                }
+                else
+                {
+                    if (time <= 6000)
+                    {
+                        Thread.Sleep(time);
+                        time += 2000;
+                    }
+                    else
+                        break;
+                }
+            }
+            return DriverManager.GetDriver().WindowHandles;
         }
     }
 }

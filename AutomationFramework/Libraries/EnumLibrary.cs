@@ -17,5 +17,12 @@ namespace AutomationFramework.Libraries
             TEXT,
             VALUE
         }
+
+        public enum Window
+        {
+            CURRENTWINDOW = 0,
+            SECONDWINDOW = 1,
+            THIRDWINDOW = 2
+        }
     }
 }
