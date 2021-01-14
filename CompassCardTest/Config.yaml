@@ -1,15 +1,15 @@
 ﻿Site:
-  ProductName: "CompassCard"
-  Environment: "PROD"
-  SiteAlias: "compasscard.ca"
+  ProductName: CompassCard
+  Environment: PROD
+  SiteAlias: compasscard.ca
 
 Settings:
-    Browser: Chrome
+    Browser: Firefox
     DeviceType: Desktop
     ShowOnMonitor: 2
     TestCategory: BVT
     RunInParallel: True
-    PassedStepScreenshot: yes
+    PassedStepScreenshot: no
     FailedStepScreenshot: yes
 
 # Browsers
