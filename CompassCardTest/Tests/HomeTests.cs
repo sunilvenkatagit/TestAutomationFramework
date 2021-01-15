@@ -5,7 +5,7 @@ using System.Threading;
 namespace CompassCardTest.Tests
 {
     public class HomeTests : BaseTest
-    {
+    {  
         [Test]
         public void UserShoulBeAbleTo_VisitCompassCardWebsite()
         {
