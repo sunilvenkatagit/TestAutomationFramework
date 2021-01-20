@@ -138,7 +138,7 @@ namespace AutomationFramework.Libraries
             }
         }
 
-        protected void SwitchTo_Window(Window window, string windowName)
+        public void SwitchTo_Window(Window window, string windowName)
         {
             try
             {
@@ -153,7 +153,7 @@ namespace AutomationFramework.Libraries
             }
         }
 
-        protected void SwitchTo_iFrame(By element, string frameName)
+        public void SwitchTo_iFrame(By element, string frameName)
         {
             try
             {
