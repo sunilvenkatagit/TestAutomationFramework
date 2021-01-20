@@ -5,14 +5,13 @@ using AutomationFramework.Configuration.ReportConfig;
 using OpenQA.Selenium;
 using System;
 using OpenQA.Selenium.Support.UI;
-using System.Collections.ObjectModel;
 using OpenQA.Selenium.Interactions;
 
 namespace AutomationFramework.Libraries
 {
-    public class ActionsLibrary
+    public sealed class ActionsLibrary
     {
-        protected void ClickOnElement(By element, WaitStrategy waitStrategy, string elementName)
+        public void ClickOnElement(By element, WaitStrategy waitStrategy, string elementName)
         {
             try
             {
@@ -26,7 +25,7 @@ namespace AutomationFramework.Libraries
             }
         }
 
-        protected void ClickUsingJavaScript(By element, WaitStrategy waitStrategy, string elementName)
+        public void ClickUsingJavaScript(By element, WaitStrategy waitStrategy, string elementName)
         {
             try
             {
@@ -42,7 +41,7 @@ namespace AutomationFramework.Libraries
             }
         }
 
-        protected void ClickUsingActions(By element, Perform action, string elementName)
+        public void ClickUsingActions(By element, Perform action, string elementName)
         {
             try
             {
@@ -66,7 +65,7 @@ namespace AutomationFramework.Libraries
             }
         }
 
-        protected void EnterText(By element, string text, WaitStrategy waitStrategy, string elementName)
+        public void EnterText(By element, string text, WaitStrategy waitStrategy, string elementName)
         {
             try
             {
@@ -80,7 +79,7 @@ namespace AutomationFramework.Libraries
             }
         }
 
-        protected string GetText(By element, WaitStrategy waitStrategy, string elementName)
+        public string GetText(By element, WaitStrategy waitStrategy, string elementName)
         {
             string text;
             try
@@ -97,7 +96,7 @@ namespace AutomationFramework.Libraries
             return text;
         }
 
-        protected string GetValueByAttribute(By element, WaitStrategy waitStrategy, string attribute, string elementName)
+        public string GetValueByAttribute(By element, WaitStrategy waitStrategy, string attribute, string elementName)
         {
             string attributeValue;
             try
@@ -114,7 +113,7 @@ namespace AutomationFramework.Libraries
             return attributeValue;
         }
 
-        protected void SelectDropdown(By element, SelectBy selectBy, string value, string elementName)
+        public void SelectDropdown(By element, SelectBy selectBy, string value, string elementName)
         {
             try
             {
@@ -130,7 +129,7 @@ namespace AutomationFramework.Libraries
                         new SelectElement(ExplicitlyWaitFor(element, WaitStrategy.PRESENT)).SelectByValue(value);
                         break;
                 }
-                ExtentLogger.Pass($"Selected '{ value }' from dropdown { elementName }", true);
+                ExtentLogger.Pass($"Selected '{ new SelectElement(ExplicitlyWaitFor(element, WaitStrategy.PRESENT)).SelectedOption.Text }' from dropdown { elementName }", true);
             }
             catch (Exception)
             {

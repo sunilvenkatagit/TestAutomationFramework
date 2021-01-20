@@ -9,7 +9,7 @@ using System;
 
 namespace CompassCardTest
 {
-    public class BasePage : ActionsLibrary
+    public class BasePage
     {
         readonly Config myConfig = new Config();
         protected bool isMobileDevice;

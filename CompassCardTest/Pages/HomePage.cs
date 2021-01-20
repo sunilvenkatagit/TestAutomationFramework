@@ -1,5 +1,6 @@
 ﻿using AutomationFramework.Configuration.DriverConfig;
 using AutomationFramework.Configuration.ReportConfig;
+using AutomationFramework.Libraries;
 using OpenQA.Selenium;
 using static AutomationFramework.Libraries.EnumLibrary;
 
@@ -7,6 +8,7 @@ namespace CompassCardTest.Pages
 {
     public class HomePage : BasePage
     {
+        readonly ActionsLibrary actionLib = new ActionsLibrary();
         private readonly By btnSignIn = By.Id("Content_lbSignIn");
         private readonly By notificationMsg = By.XPath("//div[@class='global-message  notification with-btn' and @style='display: block;']/p");
 
@@ -24,13 +26,13 @@ namespace CompassCardTest.Pages
 
         public SignInPage GoToSignInPage()
         {
-            ClickOnElement(btnSignIn, WaitStrategy.CLICKABLE, "SignIn button");
+            actionLib.ClickOnElement(btnSignIn, WaitStrategy.CLICKABLE, "SignIn button");
             return new SignInPage();
         }
 
         public string GetNotificationMessage()
         {
-            return GetText(notificationMsg, WaitStrategy.VISIBLE, "Notification popup");
+            return actionLib.GetText(notificationMsg, WaitStrategy.VISIBLE, "Notification popup");
         }
     }
 }
