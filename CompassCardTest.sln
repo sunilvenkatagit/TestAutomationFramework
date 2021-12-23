@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomationFramework", "AutomationFramework\AutomationFramework.csproj", "{D208F118-1BE7-48D6-9CC0-5B9C710D9A3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResponsiveWeb.UI.Tests", "CompassCardTest\ResponsiveWeb.UI.Tests.csproj", "{DF131181-C0AD-4041-9BB5-63272B8A0326}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResponsiveWeb.API.Tests", "..\ResponsiveWeb\ResponsiveWeb.API\ResponsiveWeb.API.Tests.csproj", "{65C7DAAC-C697-4308-A9C3-DDFB287887C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResponsiveWeb.UI.Tests", "ResponsiveWeb.UI.Tests\ResponsiveWeb.UI.Tests.csproj", "{DF131181-C0AD-4041-9BB5-63272B8A0326}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +19,14 @@ Global
 		{D208F118-1BE7-48D6-9CC0-5B9C710D9A3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D208F118-1BE7-48D6-9CC0-5B9C710D9A3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D208F118-1BE7-48D6-9CC0-5B9C710D9A3D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DF131181-C0AD-4041-9BB5-63272B8A0326}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DF131181-C0AD-4041-9BB5-63272B8A0326}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DF131181-C0AD-4041-9BB5-63272B8A0326}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DF131181-C0AD-4041-9BB5-63272B8A0326}.Release|Any CPU.Build.0 = Release|Any CPU
 		{65C7DAAC-C697-4308-A9C3-DDFB287887C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{65C7DAAC-C697-4308-A9C3-DDFB287887C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65C7DAAC-C697-4308-A9C3-DDFB287887C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65C7DAAC-C697-4308-A9C3-DDFB287887C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF131181-C0AD-4041-9BB5-63272B8A0326}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF131181-C0AD-4041-9BB5-63272B8A0326}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF131181-C0AD-4041-9BB5-63272B8A0326}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF131181-C0AD-4041-9BB5-63272B8A0326}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
