@@ -6,7 +6,7 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.IO;
 using System.Threading;
-using static AutomationFramework.Libraries.EnumLibrary;
+using static AutomationFramework.Libraries.Enums;
 
 namespace AutomationFramework.Libraries
 {

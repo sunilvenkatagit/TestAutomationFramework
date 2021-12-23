@@ -8,7 +8,7 @@ namespace AutomationFramework.Configuration.ReportConfig
     public class ExtentLogger
     {
         private ExtentLogger() { }
-        static Config myConfig = new Config();
+        static PropertyConfig myConfig = new PropertyConfig();
 
         public static void Pass(string message)
         {

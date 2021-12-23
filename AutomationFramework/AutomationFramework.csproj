@@ -234,6 +234,9 @@
     <Reference Include="RazorEngine.NetCore, Version=0.0.0.0, Culture=neutral, PublicKeyToken=9ee697374c7e744a, processorArchitecture=MSIL">
       <HintPath>..\packages\RazorEngine.NetCore.2.2.6\lib\net461\RazorEngine.NetCore.dll</HintPath>
     </Reference>
+    <Reference Include="RestSharp, Version=106.15.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.15.0\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
     <Reference Include="SeleniumExtras.WaitHelpers, Version=3.11.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\DotNetSeleniumExtras.WaitHelpers.3.11.0\lib\net45\SeleniumExtras.WaitHelpers.dll</HintPath>
     </Reference>
@@ -409,6 +412,7 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -443,15 +447,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration\DbConfig\SQLserver.cs" />
     <Compile Include="Configuration\DriverConfig\DriverManager.cs" />
     <Compile Include="Configuration\ReportConfig\ExtentLogger.cs" />
     <Compile Include="Configuration\ReportConfig\ExtentManager.cs" />
     <Compile Include="Configuration\ReportConfig\ExtentReport.cs" />
-    <Compile Include="Configuration\YamlConfig\Config.cs" />
-    <Compile Include="Configuration\YamlConfig\Constants.cs" />
-    <Compile Include="Libraries\ActionsLibrary.cs" />
-    <Compile Include="Libraries\EnumLibrary.cs" />
-    <Compile Include="Libraries\UtilityLibrary.cs" />
+    <Compile Include="Configuration\YamlConfig\PropertyConfig.cs" />
+    <Compile Include="Helpers\Constants.cs" />
+    <Compile Include="Helpers\AppSettings.cs" />
+    <Compile Include="Actions\ApiActionsLibrary.cs" />
+    <Compile Include="Actions\UIActionsLibrary.cs" />
+    <Compile Include="Helpers\Enums.cs" />
+    <Compile Include="Helpers\UtilityLibrary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

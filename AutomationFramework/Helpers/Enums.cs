@@ -1,6 +1,6 @@
 ﻿namespace AutomationFramework.Libraries
 {
-    public static class EnumLibrary
+    public static class Enums
     {
         public enum WaitStrategy
         {

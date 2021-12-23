@@ -5,7 +5,7 @@ using NUnit.Framework;
 namespace CompassCardTest
 {
     [SetUpFixture]
-    public class TestSetUp
+    public class SetUp
     {
         [OneTimeSetUp]
         public void RunBeforeAllTest()

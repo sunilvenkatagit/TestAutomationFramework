@@ -437,13 +437,15 @@
     <Compile Include="Configuration\BasePage.cs" />
     <Compile Include="Configuration\BaseTest.cs" />
     <Compile Include="Configuration\DriverFactory.cs" />
-    <Compile Include="Configuration\TestSetUp.cs" />
+    <Compile Include="SetUp.cs" />
     <Compile Include="Data\TestData.cs" />
     <Compile Include="Pages\HomePage.cs" />
     <Compile Include="Pages\MyCardsPage.cs" />
+    <Compile Include="Pages\SearchPage.cs" />
     <Compile Include="Pages\SignInPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\HomeTests.cs" />
+    <Compile Include="Tests\SearchPageTests.cs" />
     <Compile Include="Tests\SignInTests.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -455,9 +457,6 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="Config.yaml" />
-    <None Include="Data\TestData.xlsx">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

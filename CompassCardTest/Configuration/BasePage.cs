@@ -11,7 +11,7 @@ namespace CompassCardTest
 {
     public class BasePage
     {
-        readonly Config myConfig = new Config();
+        readonly PropertyConfig myConfig = new PropertyConfig();
         protected bool isMobileDevice;
         protected WebDriverWait wait;
         protected IWebDriver driver;

@@ -4,13 +4,13 @@ using SharpYaml.Serialization;
 
 namespace AutomationFramework.Configuration.YamlConfig
 {
-    public class Config
+    public class PropertyConfig
     {
         private YamlStream _yaml;
         public Settings settings;
         public Site site;
 
-        public Config()
+        public PropertyConfig()
         {
             LoadYaml();
         }

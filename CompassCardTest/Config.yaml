@@ -1,8 +1,10 @@
-﻿Site:
-  ProductName: "CompassCard"
+﻿# Pick an environment to run the tests
+Site:
+  ProductName: "ResponsiveWeb"
   Environment: "PROD"
-  SiteAlias: "compasscard.ca"
+  SiteAlias: "www.website.ca"
 
+# UI/API Test Run Configuration
 Settings:
     Browser: "Firefox"
     DeviceType: "Desktop"

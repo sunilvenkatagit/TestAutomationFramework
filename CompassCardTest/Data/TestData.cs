@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CompassCardTest.Data
 {
-    class TestData
+    public class TestData
     {
     }
 }

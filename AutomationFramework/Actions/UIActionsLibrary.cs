@@ -1,5 +1,5 @@
 ﻿using static AutomationFramework.Libraries.UtilityLibrary;
-using static AutomationFramework.Libraries.EnumLibrary;
+using static AutomationFramework.Libraries.Enums;
 using AutomationFramework.Configuration.DriverConfig;
 using AutomationFramework.Configuration.ReportConfig;
 using OpenQA.Selenium;
@@ -9,7 +9,7 @@ using OpenQA.Selenium.Interactions;
 
 namespace AutomationFramework.Libraries
 {
-    public sealed class ActionsLibrary
+    public sealed class UIActionsLibrary
     {
         public void ClickOnElement(By element, WaitStrategy waitStrategy, string elementName)
         {

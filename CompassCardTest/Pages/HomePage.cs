@@ -2,13 +2,13 @@
 using AutomationFramework.Configuration.ReportConfig;
 using AutomationFramework.Libraries;
 using OpenQA.Selenium;
-using static AutomationFramework.Libraries.EnumLibrary;
+using static AutomationFramework.Libraries.Enums;
 
 namespace CompassCardTest.Pages
 {
     public class HomePage : BasePage
     {
-        readonly ActionsLibrary actionLib = new ActionsLibrary();
+        readonly UIActionsLibrary actionLib = new UIActionsLibrary();
         private readonly By btnSignIn = By.Id("Content_lbSignIn");
         private readonly By notificationMsg = By.XPath("//div[@class='global-message  notification with-btn' and @style='display: block;']/p");
 
@@ -19,7 +19,7 @@ namespace CompassCardTest.Pages
             return this;
         }
 
-        public string GetTitle()
+        public string GetPageTitle()
         {
             return DriverManager.GetDriver().Title;
         }

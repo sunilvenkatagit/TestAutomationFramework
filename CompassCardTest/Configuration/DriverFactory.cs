@@ -11,7 +11,7 @@ namespace CompassCardTest
 
         public static void InitializeDriver()
         {
-            Config myConfig = new Config();
+            PropertyConfig myConfig = new PropertyConfig();
 
             switch (myConfig.settings.Browser)
             {
