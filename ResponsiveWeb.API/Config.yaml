@@ -1,0 +1,15 @@
+﻿# Pick an environment to run the tests
+Site:
+  ProductName: "ResponsiveWeb API"
+  Environment: "PROD"
+  SiteAlias: "www.website.ca" 
+
+# UI/API Test Run Configuration
+Settings:
+    Browser: "NA"
+    DeviceType: "NA"
+    ShowOnMonitor: 2
+    TestCategory: NA
+    RunInParallel: True
+    PassedStepScreenshot: "no"
+    FailedStepScreenshot: "yes"
